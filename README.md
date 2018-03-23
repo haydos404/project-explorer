@@ -52,7 +52,7 @@ The project has three configuration files included to help keep to guidelines. I
 
 ## Description
 
-![project explorer explanation](project_explorer.png)
+![project explorer explanation](project_explorer.png?)
 
 The sample project is a single page application with no router. By default it will display
 
