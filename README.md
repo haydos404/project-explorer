@@ -62,3 +62,17 @@ The sample project is a single page application with no router. By default it wi
 When a diagram title is clicked it will show the title and xml of that diagram underneath. **These UI parts are just to help understand how the project fits together and may be removed**.
 
 Depending on the task provided the `src/features/sandbox/Sandbox.tsx` will generally be the entry point for any new UI code/components added into the system.
+
+### Typescript
+
+If you are unfamiliar with typescript you may tweak the linting by editing the `tslint.json` file in the root of the project to be more ad hoc.
+
+A common issue you may find is from importing JavaScript files into a TypeScript project without proper typings. To get around this try using `npm i -D @types/{javascript library}` to install community typings. Alternatively, for libraries such as `bpmn-js` where there are no official or community typings you may have to import using `require` instead of typescript module importing. For example:
+
+```typescript
+import * as bpmn from 'bpmn-js'; // This won't work due to no available typings
+import bpmn from 'bpmn-js'; // This is importing a default export. But there are no typings, so this won't work either
+import {} from 'bpmn-js'; // There's nothing here.
+
+const BPMN = require('bpmn-js'); // This will work. It will be of type {any} and usable like any other JavaScript.
+```

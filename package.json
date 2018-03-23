@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/prop-types": "^15.5.2",
+    "bpmn-js": "^0.28.1",
     "mobx": "^4.1.0",
     "mobx-react": "^5.0.0",
     "node-uuid": "^1.4.8",
