@@ -4,6 +4,7 @@ import { computed, observable } from 'mobx';
 import { inject, observer } from 'mobx-react';
 import * as React from 'react';
 
+import BpmnView from './BpmnView';
 import { Link } from '../../sdk/components/Link/Link';
 import { Title } from '../../sdk/components/Title/Title';
 import { RootStore } from '../../store/root';
@@ -47,7 +48,7 @@ export default class Sandbox extends React.Component<IBPMNProps> {
         <p>Loaded Diagrams: {this.models.length}</p>
 
         {this.renderPlaceholder()}
-
+        <BpmnView xml={this.active ? this.active.xml : null} />
         {/* ... Insert components here */}
       </div>
     );
